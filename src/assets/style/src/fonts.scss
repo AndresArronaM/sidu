@@ -1,0 +1,27 @@
+@font-face {
+  font-family: AzoSans;
+  src: url("~@/assets/fonts/AzoSans/AzoSans-Regular.otf");
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url("~@/assets/fonts/myriadPro/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url("~@/assets/fonts/raleway/Raleway-Regular.otf");
+}
+
+@font-face {
+  font-family: FS Joey;
+  src: url("~@/assets/fonts/FS-Joey/FS-Joey-Regular.otf");
+}
+
+:root {
+  --azosans: AzoSans;
+  --myriadpro: MyriadPro;
+  --raleway: Raleway;
+  --roboto: Roboto;
+  --fsjoey: FS Joey;
+}
