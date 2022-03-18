@@ -1,6 +1,41 @@
-@import "~@/assets/scss/src/fonts.scss";
-@import "~@/assets/scss/src/reset.scss";
-@import "~@/assets/scss/src/fontAwesome.scss";
-@import "~@/assets/scss/src/tailwind.scss";
-@import "~@/assets/scss/src/daisyui.scss";
-@import "~@/assets/scss/src/primeVue.scss";
+@import "~@/assets/style/src/fonts.scss";
+@import "~@/assets/style/src/reset.scss";
+@import "~@/assets/style/src/fontAwesome.scss";
+@import "~@/assets/style/src/tailwind.scss";
+@import "~@/assets/style/src/daisyui.scss";
+@import "~@/assets/style/src/primeVue.scss";
+@import "~@/assets/style/src/colors.scss";
+
+.du{
+  &-app{
+    @apply
+    tw-flex
+    tw-flex-col
+    tw-justify-center
+    tw-items-center
+    tw-w-screen
+    tw-h-screen;
+    background-color: var(--blue_dark);
+  }
+
+  &-title{
+    @apply tw-mb-3 tw-font-[900];
+    font-family: var(--raleway);
+  }
+
+  &-subtitle{
+    @apply tw-mt-3 tw-font-[600];
+    font-family: var(--raleway);
+  }
+
+  &-input{
+    @apply tw-flex tw-w-full tw-h-[3rem] tw-items-center;
+
+    &-icon{
+      @apply tw-h-[1.25rem] tw-w-[1.25rem] tw-rounded-full tw-mr-[0.75rem] tw-mt-[0.75rem] tw-mb-[0.75rem]  tw-p-[1rem];
+      background-color: var(--blue_light);
+      color: var(--white);
+    }
+  }
+}
+
