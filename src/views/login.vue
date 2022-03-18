@@ -3,10 +3,16 @@
     <template #registro>
       <div class="p-fluid">
         <div class="field">
+<<<<<<< HEAD
           <div>
             <label
               for="email"
               class="tw-text-xl tw-font-semibold tw-ml-2"
+=======
+          <div class="du-label">
+            <label
+              for="email"
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
               :class="{'p-error':v$.datos.email.$invalid && submitted}">Email</label>
           </div>
           <div class="du-input">
@@ -34,6 +40,7 @@
           </div>
         </div>
         <div class="field">
+<<<<<<< HEAD
           <div>
             <div>
               <font-awesome-icon icon="lock" />
@@ -42,6 +49,15 @@
                 class="tw-text-xl tw-font-semibold tw-ml-2"
                 :class="{'p-error': v$.datos.password.$invalid && submitted}">Contraseña</label>
             </div>
+=======
+          <div class="du-label">
+            <label
+                for="password"
+                :class="{'p-error': v$.datos.password.$invalid && submitted}">Contraseña</label>
+          </div>
+          <div class="du-input">
+            <font-awesome-icon icon="lock"  class="du-input-icon"/>
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
             <pv-password
               id="password"
               v-model="v$.datos.password.$model"
@@ -56,25 +72,42 @@
               :feedback="false"
               :toggleMask="true"
             />
+<<<<<<< HEAD
             <template v-if="(v$.datos.password.$invalid && submitted) || v$.datos.password.$pending.$response">
               <pv-inlineMessage>
                 {{ v$.datos.password.required.$message.replace("Value", "Contraseña") }}
               </pv-inlineMessage>
             </template>
           </div>
+=======
+          </div>
+          <template v-if="(v$.datos.password.$invalid && submitted) || v$.datos.password.$pending.$response">
+            <pv-inlineMessage>
+              {{ v$.datos.password.required.$message.replace("Value", "Contraseña") }}
+            </pv-inlineMessage>
+          </template>
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
         </div>
       </div>
     </template>
     <template #botones>
       <div class="tw-flex tw-justify-between">
         <du-link
+<<<<<<< HEAD
           class="p-button tw-bg-white tw-text-sky-900 tw-border-0"
+=======
+          class="p-button du-green-light"
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
           to="/recuperar"
         >
           <p>Olvide mi contraseña</p>
         </du-link>
         <pv-button
+<<<<<<< HEAD
           class="tw-bg-sky-900 tw-border-0"
+=======
+          class="du-green-light"
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
           type="submit"
           label="Iniciar Secion"
           :loading="loading"

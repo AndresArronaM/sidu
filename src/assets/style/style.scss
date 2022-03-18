@@ -13,8 +13,13 @@
     tw-flex-col
     tw-justify-center
     tw-items-center
+<<<<<<< HEAD
     tw-w-screen
     tw-h-screen;
+=======
+    tw-w-auto
+    tw-h-auto;
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
     background-color: var(--blue_dark);
   }
 
@@ -29,6 +34,7 @@
   }
 
   &-input{
+<<<<<<< HEAD
     @apply tw-flex tw-w-full tw-h-[3rem] tw-items-center;
 
     &-icon{
@@ -36,6 +42,40 @@
       background-color: var(--blue_light);
       color: var(--white);
     }
+=======
+    @apply tw-flex tw-w-full tw-h-[3.2rem] tw-items-center;
+    background-color: var(--white);
+
+    &-icon{
+      @apply tw-h-[1.25rem] tw-w-[1.25rem] tw-mr-[0.75rem] tw-mt-[0.75rem] tw-mb-[0.75rem]  tw-p-[1rem];
+      background-color: var(--blue_light);
+      color: var(--white);
+    }
+
+    & .p-inputtext{
+      @apply tw-border-0;
+      padding: 0.75rem 0rem;
+
+      &:enabled:focus{
+        @apply tw-border-inherit tw-shadow-none tw-shadow-inherit;
+      }
+    }
+  }
+
+  &-label{
+    @apply tw-text-xl tw-font-semibold tw-mb-3;
+    font-family: var(--raleway);
+  }
+
+  &-green-light{
+    @apply tw-border-inherit tw-border-none;
+    background: inherit;
+    background-color:var(--green_dark);
+    &:enabled:hover{
+      background: inherit;
+      background-color:var(--green_base);
+    }
+>>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
   }
 }
 
