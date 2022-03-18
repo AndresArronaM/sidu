@@ -1,0 +1,66 @@
+@import "~@/assets/style/src/fonts.scss";
+@import "~@/assets/style/src/reset.scss";
+@import "~@/assets/style/src/fontAwesome.scss";
+@import "~@/assets/style/src/tailwind.scss";
+@import "~@/assets/style/src/daisyui.scss";
+@import "~@/assets/style/src/primeVue.scss";
+@import "~@/assets/style/src/colors.scss";
+
+.du{
+  &-app{
+    @apply
+    tw-flex
+    tw-flex-col
+    tw-justify-center
+    tw-items-center
+    tw-w-auto
+    tw-h-auto;
+    background-color: var(--blue_dark);
+  }
+
+  &-title{
+    @apply tw-mb-3 tw-font-[900];
+    font-family: var(--raleway);
+  }
+
+  &-subtitle{
+    @apply tw-mt-3 tw-font-[600];
+    font-family: var(--raleway);
+  }
+
+  &-input{
+    @apply tw-flex tw-w-full tw-h-[3.2rem] tw-items-center;
+    background-color: var(--white);
+
+    &-icon{
+      @apply tw-h-[1.25rem] tw-w-[1.25rem] tw-mr-[0.75rem] tw-mt-[0.75rem] tw-mb-[0.75rem]  tw-p-[1rem];
+      background-color: var(--blue_light);
+      color: var(--white);
+    }
+
+    & .p-inputtext{
+      @apply tw-border-0;
+      padding: 0.75rem 0rem;
+
+      &:enabled:focus{
+        @apply tw-border-inherit tw-shadow-none tw-shadow-inherit;
+      }
+    }
+  }
+
+  &-label{
+    @apply tw-text-xl tw-font-semibold tw-mb-3;
+    font-family: var(--raleway);
+  }
+
+  &-green-light{
+    @apply tw-border-inherit tw-border-none;
+    background: inherit;
+    background-color:var(--green_dark);
+    &:enabled:hover{
+      background: inherit;
+      background-color:var(--green_base);
+    }
+  }
+}
+

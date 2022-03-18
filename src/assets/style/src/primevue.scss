@@ -1,0 +1,17 @@
+@import 'primevue/resources/themes/tailwind-light/theme.css';
+@import 'primevue/resources/primevue.min.css';
+@import 'primeflex/primeflex.css';
+@import 'primeicons/primeicons.css';
+
+.p{
+  &-card{
+    @apply tw-w-[26rem] tw-border-4 tw-rounded-[2rem];
+    background-color: var(--blue_dark);
+    color: var(--white);
+    border-color: var(--blue_light);
+
+    & .p-card-title{
+      @apply tw-text-3xl tw-mb-2 tw-text-center tw-font-[0] tw-uppercase;
+    }
+  }
+}
