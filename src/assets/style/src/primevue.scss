@@ -14,4 +14,40 @@
       @apply tw-text-3xl tw-mb-2 tw-text-center tw-font-[0] tw-uppercase;
     }
   }
+
+  &-menubar{
+    @apply tw-border-inherit tw-border-none tw-w-full tw-h-[6rem];
+    background: inherit;
+    background-color: var(--blue_base);
+
+    &-start{
+      @apply tw-h-full;
+    }
+
+    & .p-menubar-root-list {
+      & > .p-menuitem {
+        & > .p-menuitem-link {
+          &:focus{
+            @apply tw-shadow-none tw-shadow-inherit;
+          }
+          &:not(.p-disabled):hover{
+            background: inherit;
+            background-color: var(--green_base);
+            & .p-menuitem-text {
+              color:var(--white);
+            }
+          }
+          & .p-menuitem-text {
+            color:var(--white);
+          }
+        }
+      }
+    }
+  }
+
+  &-toolbar{
+    @apply tw-border-inherit tw-border-none;
+    background: inherit;
+    background-color: var(--blue_base);
+  }
 }

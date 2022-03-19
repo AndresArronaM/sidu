@@ -13,13 +13,8 @@
     tw-flex-col
     tw-justify-center
     tw-items-center
-<<<<<<< HEAD
-    tw-w-screen
-    tw-h-screen;
-=======
     tw-w-auto
-    tw-h-auto;
->>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
+    tw-h-[100vh];
     background-color: var(--blue_dark);
   }
 
@@ -34,15 +29,6 @@
   }
 
   &-input{
-<<<<<<< HEAD
-    @apply tw-flex tw-w-full tw-h-[3rem] tw-items-center;
-
-    &-icon{
-      @apply tw-h-[1.25rem] tw-w-[1.25rem] tw-rounded-full tw-mr-[0.75rem] tw-mt-[0.75rem] tw-mb-[0.75rem]  tw-p-[1rem];
-      background-color: var(--blue_light);
-      color: var(--white);
-    }
-=======
     @apply tw-flex tw-w-full tw-h-[3.2rem] tw-items-center;
     background-color: var(--white);
 
@@ -67,15 +53,36 @@
     font-family: var(--raleway);
   }
 
-  &-green-light{
-    @apply tw-border-inherit tw-border-none;
+  &-logo{
+    @apply tw-h-full;
+  }
+
+  &-crud{
+    @apply tw-h-full tw-w-full;
+  }
+
+  &-btn{
+    @apply tw-border-inherit tw-border-none tw-border-0;
     background: inherit;
-    background-color:var(--green_dark);
     &:enabled:hover{
       background: inherit;
-      background-color:var(--green_base);
     }
->>>>>>> 95153a8a775e429ee6c76b8f2b60414ffb77404d
+    &:enabled:active{
+      background: inherit;
+    }
+    &:focus{
+      @apply tw-shadow-none tw-shadow-inherit;
+    }
+  }
+
+  &-green-dark{
+    background-color:var(--green_dark);
+    &:enabled:hover{
+      background-color:var(--green_dark);
+    }
+    &:enabled:active{
+      background-color:var(--green_dark);
+    }
   }
 }
 

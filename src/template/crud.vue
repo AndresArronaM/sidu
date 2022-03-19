@@ -1,28 +1,28 @@
 <template>
-  <pv-confirmdialog />
-  <div class="tw-w-full">
+  <pv-confirmDialog />
+  <div class="du-crud">
     <pv-toolbar>
       <template #start>
         <pv-button
           :label="btnAgregar"
-          class="tw-mx-4 tw-bg-lime-600 tw-border-0"
+          class="tw-mx-4 du-btn du-green-light"
           @click="$emit('abrirModal', {'visible': true, 'cmd': 1})"
         />
       </template>
       <template #end>
         <pv-button
           label="Actualizar"
-          class="tw-mx-4 tw-bg-cyan-900 tw-border-0"
+          class="tw-mx-4 du-btn du-green-dark"
           @click="$emit('updated', true)"
         />
         <pv-button
           label="Exportar"
-          class="tw-mx-4 tw-bg-teal-500 tw-border-0"
+          class="du-btn du-green-dark"
           @click="exportCSV($event)"
         />
       </template>
     </pv-toolbar>
-    <pv-datatable
+    <pv-dataTable
       ref="dt"
       :value="catalogo"
       :dataKey="idCatalogo"
@@ -49,7 +49,7 @@
           <h2>{{ titulo }}</h2>
           <span>
             <i></i>
-            <pv-inputtext v-model="filters['global'].value" placeholder="Buscar" />
+            <pv-inputText v-model="filters['global'].value" placeholder="Buscar" />
           </span>
         </div>
       </template>
@@ -83,7 +83,7 @@
           />
         </template>
       </pv-column>
-    </pv-datatable>
+    </pv-dataTable>
     <slot name="modal"></slot>
   </div>
 </template>

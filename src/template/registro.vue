@@ -1,7 +1,7 @@
 <template>
   <pv-card>
     <template #header>
-      <img alt="logo de la administracion 2021-24" src=/img/veda/logo_alt.png/>
+      <img alt="logo de la administracion 2021-24" src=/img/veda/logo_alt.png>
     </template>
     <template #title>
       <h1 class="du-title">{{ titulo }}</h1>

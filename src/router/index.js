@@ -6,6 +6,11 @@ const routes = [
     path: '/',
     name: 'Ingresar',
     component: () => import('../views/login.vue')
+  },
+  {
+    path: '/user',
+    name: 'Control de usuarios',
+    component: () => import('../views/user.vue')
   }
 ]
 
@@ -15,7 +20,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const publicPages = ['/']
+  const publicPages = ['/', '/user']
   const authRequired = !publicPages.includes(to.path)
   const loggedIn = ls.get('user')
   if (authRequired && !loggedIn) {
