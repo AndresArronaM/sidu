@@ -39,7 +39,7 @@
                 :class="{'p-error': v$.datos.password.$invalid && submitted}">Contraseña</label>
           </div>
           <div class="du-input">
-            <font-awesome-icon icon="lock"  class="du-input-icon"/>
+            <font-awesome-icon icon="key"  class="du-input-icon"/>
             <pv-password
               id="password"
               v-model="v$.datos.password.$model"
@@ -66,13 +66,13 @@
     <template #botones>
       <div class="tw-flex tw-justify-between">
         <du-link
-          class="p-button du-green-light"
+          class="p-button du-btn du-green-dark"
           to="/recuperar"
         >
           <p>Olvide mi contraseña</p>
         </du-link>
         <pv-button
-          class="du-green-light"
+          class="du-btn du-green-dark"
           type="submit"
           label="Iniciar Secion"
           :loading="loading"

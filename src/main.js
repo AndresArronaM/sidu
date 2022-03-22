@@ -1,6 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faLock, faEye, faEyeSlash, faAt, faLandmark, faKey, faTag, faHashtag, faCalendarDay, faCopyright, faFileSignature } from '@fortawesome/free-solid-svg-icons'
 
 import '@fortawesome/fontawesome-free/scss/fontawesome.scss'
 import '@fortawesome/fontawesome-free/scss/regular.scss'
@@ -115,6 +115,11 @@ import Registro from '@/template/registro'
 
 import Link from '@/components/link'
 
+import CreatedUser from '@/components/create/user'
+import CreatedBienes from '@/components/create/bienes'
+import CreatedDepartamentos from '@/components/create/departamentos'
+import CreatedCategorias from '@/components/create/categorias'
+
 const app = createApp(App)
 app.use(router)
 app.use(PrimeVue,
@@ -123,7 +128,7 @@ app.use(PrimeVue,
     locale: {}
   })
 
-library.add(faUser, faLock, faEye, faEyeSlash)
+library.add(faUser, faLock, faEye, faEyeSlash, faAt, faLandmark, faKey, faTag, faHashtag, faCalendarDay, faCopyright, faFileSignature)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -228,5 +233,10 @@ app.component('du-panels', Panels)
 app.component('du-registro', Registro)
 
 app.component('du-link', Link)
+
+app.component('du-createdUser', CreatedUser)
+app.component('du-createdBienes', CreatedBienes)
+app.component('du-createdDepartamentos', CreatedDepartamentos)
+app.component('du-createdCategorias', CreatedCategorias)
 
 app.mount('#app')
