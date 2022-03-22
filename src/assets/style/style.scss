@@ -6,8 +6,8 @@
 @import "~@/assets/style/src/primeVue.scss";
 @import "~@/assets/style/src/colors.scss";
 
-.du{
-  &-app{
+.du {
+  &-app {
     @apply
     tw-flex
     tw-flex-col
@@ -18,41 +18,47 @@
     background-color: var(--blue_dark);
   }
 
-  &-title{
+  &-title {
     @apply tw-mb-3 tw-font-[900];
     font-family: var(--raleway);
   }
 
-  &-subtitle{
+  &-subtitle {
     @apply tw-mt-3 tw-font-[600];
     font-family: var(--raleway);
   }
 
-  &-input{
+  &-input {
     @apply tw-flex tw-w-full tw-h-[3.2rem] tw-items-center;
     background-color: var(--white);
 
-    &-icon{
+    &-alt {
+      @apply tw-border-b-2 tw-border-solid;
+      border-bottom-color: var(--blue_light);
+    }
+
+    &-icon {
       @apply tw-h-[1.25rem] tw-w-[1.25rem] tw-mr-[0.75rem] tw-mt-[0.75rem] tw-mb-[0.75rem]  tw-p-[1rem];
       background-color: var(--blue_light);
       color: var(--white);
     }
 
-    & .p-inputtext{
+    & .p-inputtext {
       @apply tw-border-0;
       padding: 0.75rem 0rem;
 
-      &:enabled:focus{
+      &:enabled:focus {
         @apply tw-border-inherit tw-shadow-none tw-shadow-inherit;
       }
     }
   }
 
-  &-label{
+  &-label {
     @apply tw-text-xl tw-font-semibold tw-mb-3;
     font-family: var(--raleway);
   }
 
+<<<<<<< HEAD
   &-logo{
     @apply tw-h-full;
   }
@@ -82,7 +88,63 @@
     }
     &:enabled:active{
       background-color:var(--green_dark);
+=======
+  &-logo {
+    @apply tw-h-full;
+  }
+
+  &-crud {
+    @apply tw-h-full tw-w-full;
+  }
+
+  &-btn {
+    @apply tw-border-inherit tw-border-none tw-border-0;
+    background: inherit;
+
+    &-alt{
+      @apply tw-mx-4;
     }
+
+    &:enabled:hover {
+      background: inherit;
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
+    }
+
+    &:enabled:active {
+      background: inherit;
+    }
+
+    &:focus {
+      @apply tw-shadow-none tw-shadow-inherit;
+    }
+  }
+
+  &-green-dark {
+    background-color: var(--green_dark);
+
+    &:enabled:hover {
+      background-color: var(--green_dark);
+    }
+
+    &:enabled:active {
+      background-color: var(--green_dark);
+    }
+  }
+
+  &-green-light {
+    background-color: var(--green_light);
+
+    &:enabled:hover {
+      background-color: var(--green_light);
+    }
+
+    &:enabled:active {
+      background-color: var(--green_light);
+    }
+  }
+
+  &-footer-btn{
+    @apply tw-flex tw-justify-between tw-items-center tw-w-full tw-h-[3.2rem] tw-mb-3;
   }
 }
 

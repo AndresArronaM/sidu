@@ -5,19 +5,34 @@
       <template #start>
         <pv-button
           :label="btnAgregar"
+<<<<<<< HEAD
           class="tw-mx-4 du-btn du-green-light"
+=======
+          class="du-btn du-btn-alt du-green-light"
+          icon="fa-solid fa-user-plus"
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
           @click="$emit('abrirModal', {'visible': true, 'cmd': 1})"
         />
       </template>
       <template #end>
         <pv-button
           label="Actualizar"
+<<<<<<< HEAD
           class="tw-mx-4 du-btn du-green-dark"
+=======
+          class="du-btn du-green-dark"
+          icon="fa-solid fa-arrows-rotate"
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
           @click="$emit('updated', true)"
         />
         <pv-button
           label="Exportar"
+<<<<<<< HEAD
           class="du-btn du-green-dark"
+=======
+          class="du-btn du-btn-alt du-green-dark"
+          icon="fa-solid fa-file-export"
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
           @click="exportCSV($event)"
         />
       </template>

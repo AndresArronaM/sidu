@@ -39,7 +39,7 @@
                 :class="{'p-error': v$.datos.password.$invalid && submitted}">Contraseña</label>
           </div>
           <div class="du-input">
-            <font-awesome-icon icon="lock"  class="du-input-icon"/>
+            <font-awesome-icon icon="key"  class="du-input-icon"/>
             <pv-password
               id="password"
               v-model="v$.datos.password.$model"

@@ -11,6 +11,29 @@ const routes = [
     path: '/user',
     name: 'Control de usuarios',
     component: () => import('../views/user.vue')
+<<<<<<< HEAD
+=======
+  },
+  {
+    path: '/bienes',
+    name: 'Control de bienes',
+    component: () => import('../views/bienes.vue')
+  },
+  {
+    path: '/departamentos',
+    name: 'Control de departamentos',
+    component: () => import('../views/departamentos.vue')
+  },
+  {
+    path: '/categoria',
+    name: 'Control de categoria',
+    component: () => import('../views/categoria.vue')
+  },
+  {
+    path: '/reportes',
+    name: 'Control de reportes',
+    component: () => import('../views/reportes.vue')
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
   }
 ]
 
@@ -20,7 +43,11 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+<<<<<<< HEAD
   const publicPages = ['/', '/user']
+=======
+  const publicPages = ['/', '/user', '/bienes', '/departamentos', '/categoria', '/reportes']
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
   const authRequired = !publicPages.includes(to.path)
   const loggedIn = ls.get('user')
   if (authRequired && !loggedIn) {

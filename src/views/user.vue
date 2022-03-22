@@ -19,7 +19,11 @@
             :modal="true"
             :closable="false"
           >
+<<<<<<< HEAD
             <du-addUser
+=======
+            <du-createdUser
+>>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
               :header="false"
               :button="true"
               @cerrarModal="closeAddUser"

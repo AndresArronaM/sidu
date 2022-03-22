@@ -63,8 +63,7 @@ function encriptarPassword($pass)
     return $pws = sha1(md5($salt . $pass));
 }
 
-function output($error, $success, $session, $msg, $data)
-{
+function output($error, $success, $session, $msg, $data){
     $output = array(
         'error' => $error,
         'success' => $success,
