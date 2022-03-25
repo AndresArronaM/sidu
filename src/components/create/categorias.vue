@@ -63,14 +63,14 @@ import { useVuelidate } from '@vuelidate/core'
 import { helpers, required } from '@vuelidate/validators'
 import template from '@/mixins/template'
 import alerts from '@/mixins/alerts/alerts'
-import createdDepartamentos from '@/mixins/services/created/createdDepartamentos'
-import updatedDepartamentos from '@/mixins/services/updated/updatedDepartamentos'
+import createdCategorias from '@/mixins/services/created/createdDepartamentos'
+import updatedCategorias from '@/mixins/services/updated/updatedDepartamentos'
 
 export default {
   name: 'du-createdDepartamentos',
   props: ['button', 'cmd', 'data'],
   emits: ['closeModal'],
-  mixins: [template, alerts, createdDepartamentos, updatedDepartamentos],
+  mixins: [template, alerts, createdCategorias, updatedCategorias],
   setup: () => ({ v$: useVuelidate() }),
   data: () => ({ loading: false }),
   validations: () => ({

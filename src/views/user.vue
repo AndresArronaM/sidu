@@ -4,7 +4,7 @@
       <du-crud
         @abrirModal="openAddUser"
         @modificarModal="changeUser"
-        @updated="updatedUser"
+        @updated="updatedUsers"
         :catalogo="usuarios"
         idCatalogo="id"
         :columns="columns"
@@ -19,11 +19,7 @@
             :modal="true"
             :closable="false"
           >
-<<<<<<< HEAD
-            <du-addUser
-=======
             <du-createdUser
->>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
               :header="false"
               :button="true"
               @cerrarModal="closeAddUser"
@@ -39,10 +35,11 @@
 
 <script>
 import alerts from '@/mixins/alerts/alerts'
+import updatedUser from '@/mixins/services/updated/updatedUsers'
 
 export default {
   name: 'du-user',
-  mixins: [alerts],
+  mixins: [alerts, updatedUser],
   data: () => ({
     addUser: {
       visible: null,
@@ -60,7 +57,7 @@ export default {
       { field: 'usuario', header: 'Usuario' },
       { field: 'status', header: 'Estatus' },
       { field: 'email', header: 'Email' },
-      { field: 'dependencia', header: 'Dependencia' },
+      { field: 'departamento', header: 'Departamento' },
       { field: 'permiso', header: 'Permisos' }
     ]
   },
@@ -68,7 +65,7 @@ export default {
     openAddUser (newValue) { this.addUser = newValue },
     closeAddUser (newValue) { this.addUser = newValue },
     changeUser (newValue) { newValue === 3 ? this.warning(newValue, this.msg.activar) : this.warning(newValue, this.msg.desactivar) },
-    updatedUser (newValue) {
+    updatedUsers (newValue) {
       this.catalogoUsuarios()
       this.respuesta = 'Datos Actualizados'
       this.showSuccess()

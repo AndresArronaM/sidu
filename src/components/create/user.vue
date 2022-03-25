@@ -130,7 +130,7 @@
       />
       <pv-button
         :label="'Crear Usuario'"
-        v-if="cmd !==4"
+        v-if="cmd !==2"
         icon="fa-solid fa-user-plus"
         class="du-btn du-green-dark"
         :loading="loading"
@@ -138,11 +138,11 @@
       />
       <pv-button
         :label="'Modificar Usuario'"
-        v-if="cmd ===4"
+        v-if="cmd ===2"
         icon="fa-solid fa-user-pen"
         class="du-btn du-green-dark"
         :loading="loading"
-        @click="$emit('cerrarModal', false), ModificarUsuario(!v$.$invalid, this.createdUser)"
+        @click="$emit('cerrarModal', false), modificarUsuario(!v$.$invalid, this.createdUser)"
       />
     </footer>
   </div>
@@ -185,7 +185,9 @@ export default {
     }
   }),
   created () {
-    this.cmd === 2 ? this.createdUser = this.data : this.createdUser = ''
+    if (this.cmd === 2) {
+      this.createdUser = this.data
+    }
   },
   methods: {
     enviarData (data) {

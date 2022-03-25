@@ -88,10 +88,11 @@ import { email, helpers, minLength, maxLength, required } from '@vuelidate/valid
 import { useVuelidate } from '@vuelidate/core'
 import template from '@/mixins/template'
 import dialog from '@/mixins/alerts/dialog'
+import login from '@/mixins/services/auth/login'
 
 export default {
   name: 'du-login',
-  mixins: [template, dialog],
+  mixins: [template, dialog, login],
   setup: () => ({ v$: useVuelidate() }),
   validations: () => ({
     datos: {

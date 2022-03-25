@@ -58,37 +58,6 @@
     font-family: var(--raleway);
   }
 
-<<<<<<< HEAD
-  &-logo{
-    @apply tw-h-full;
-  }
-
-  &-crud{
-    @apply tw-h-full tw-w-full;
-  }
-
-  &-btn{
-    @apply tw-border-inherit tw-border-none tw-border-0;
-    background: inherit;
-    &:enabled:hover{
-      background: inherit;
-    }
-    &:enabled:active{
-      background: inherit;
-    }
-    &:focus{
-      @apply tw-shadow-none tw-shadow-inherit;
-    }
-  }
-
-  &-green-dark{
-    background-color:var(--green_dark);
-    &:enabled:hover{
-      background-color:var(--green_dark);
-    }
-    &:enabled:active{
-      background-color:var(--green_dark);
-=======
   &-logo {
     @apply tw-h-full;
   }
@@ -107,7 +76,6 @@
 
     &:enabled:hover {
       background: inherit;
->>>>>>> 23c10c6858a73306abcda7fdc99eb2b7b2878f02
     }
 
     &:enabled:active {

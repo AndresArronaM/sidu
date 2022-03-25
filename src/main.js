@@ -119,6 +119,7 @@ import CreatedUser from '@/components/create/user'
 import CreatedBienes from '@/components/create/bienes'
 import CreatedDepartamentos from '@/components/create/departamentos'
 import CreatedCategorias from '@/components/create/categorias'
+import CreatedDocumento from '@/components/create/documento'
 
 const app = createApp(App)
 app.use(router)
@@ -238,5 +239,6 @@ app.component('du-createdUser', CreatedUser)
 app.component('du-createdBienes', CreatedBienes)
 app.component('du-createdDepartamentos', CreatedDepartamentos)
 app.component('du-createdCategorias', CreatedCategorias)
+app.component('du-createdDocumento', CreatedDocumento)
 
 app.mount('#app')

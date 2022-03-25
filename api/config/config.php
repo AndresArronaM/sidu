@@ -1,6 +1,6 @@
 <?php
 function connectDB(){
-    return @new mysqli('192.1.47.104', 'root', 'Admin-dgdu3438', 'sidu');
+    return @new mysqli('127.0.0.1', 'root', '', 'inventario');
 }
 
 ?>

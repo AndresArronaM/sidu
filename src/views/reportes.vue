@@ -9,7 +9,7 @@
         idCatalogo='id'
         :columns='columns'
         titulo='Listado de categorias'
-        btnAgregar='Registrar categoria'
+        btnAgregar='Crear Reporte'
       >
         <template #modal>
           <pv-dialog
@@ -37,7 +37,7 @@
 import alerts from '@/mixins/alerts/alerts'
 
 export default {
-  name: 'du-Documentos',
+  name: 'du-Reportes',
   mixins: [alerts],
   data: () => ({
     addDocumentos: {
